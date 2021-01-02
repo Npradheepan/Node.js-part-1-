@@ -1,0 +1,35 @@
+var http = require("http");
+http.createServer(function (require, response) {
+  response.writeHead(200, { 'content - type': 'text/plain' });
+  response.end('Hallo World !');
+}); listen(8080);
+Console.log('server rinning at http://27.0.0.1:8080/');
+
+/*exports file Name index01*/
+function myfunc() {
+  console.log('Function Testing!');
+};
+var num = 123;
+module.exports.myfunc = myfunc;
+module.exports.num = num;
+/*File Name index*/
+const globle = require('./index01.js');
+globle.myfunc();
+console.log(globle.num);
+
+/*Class Call Function Main File Name  index*/
+const local = require('./index02');
+var obj = new local.program('pradheepan');
+obj.myFunc();
+
+/* class call function*/
+class program {
+  constructor(name) {
+    this.name = name;
+  }
+  myFunc() {
+    console.log('My Name ist:' + this.name)
+  }
+
+}
+module.exports.program = program;
