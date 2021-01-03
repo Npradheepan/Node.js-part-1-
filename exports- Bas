@@ -1,0 +1,11 @@
+console.log('Node.js tutorial');
+
+const fs = require('fs');
+const os = require('os')
+const idex01 = require('./index01.js')
+
+var user = os.userInfo();
+console.log(user.username);
+
+/*index01.js*/
+console.log('This also exports');
