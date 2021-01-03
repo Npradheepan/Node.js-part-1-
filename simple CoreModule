@@ -1,0 +1,28 @@
+//Core module
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('what is your name ? ', (ans) => {
+  if (ans === 'pradheepan') {
+    rl.close();
+  }
+  else {
+    rl.setPrompt('wrong Name Try Again \n');
+    rl.prompt();
+    rl.on('line', (inp) => {
+      if (inp == 'pradheepan') {
+        rl.close();
+      }
+      else {
+        rl.setPrompt(inp + 'Wrong \n');
+        rl.prompt();
+      }
+    });
+  }
+});
+rl.on('close', () => {
+  console.log('correct !!!');
+})
