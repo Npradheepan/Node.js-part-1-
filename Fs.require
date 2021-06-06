@@ -1,0 +1,6 @@
+console.log('hallo Node.js');
+const fs = require('fs');
+var os= require('os');
+var user= os.userrinfo();
+console.log(user);
+fs.appendFile('message.txt','nodefile');
