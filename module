@@ -1,0 +1,22 @@
+console.log(module);
+---------------------
+
+C:\Users\pradh\OneDrive\Desktop\node\app>node index.js
+Module {
+  id: '.',
+  path: 'C:\\Users\\pradh\\OneDrive\\Desktop\\node\\app',
+  exports: {},
+  parent: null,
+  filename: 'C:\\Users\\pradh\\OneDrive\\Desktop\\node\\app\\index.js',
+  loaded: false,
+  children: [],
+  paths: [
+    'C:\\Users\\pradh\\OneDrive\\Desktop\\node\\app\\node_modules',
+    'C:\\Users\\pradh\\OneDrive\\Desktop\\node\\node_modules',
+    'C:\\Users\\pradh\\OneDrive\\Desktop\\node_modules',
+    'C:\\Users\\pradh\\OneDrive\\node_modules',
+    'C:\\Users\\pradh\\node_modules',
+    'C:\\Users\\node_modules',
+    'C:\\node_modules'
+  ]
+}
