@@ -1,53 +1,15 @@
-const express = require('express');
-const app = express();
-
-app.use(express.static('public'));
-app.set('view engine','ejs');
-
-app.get('/',(req, res)=>{
-    res.render('home',{
-        tittle:"home"
-    });
-
-});
-
-app.get('/about',(req,res)=>{
-    res.render('about',{
-        tittle:"about"  
-    });
-});
-
-app.get('/products',(req,res)=>{ 
-    res.render('products', {
-        tittle:"Women's Collection"
-    }); 
-});
-
-app.get('/product/:id',(req,res)=>{
-    var data = [{
-        id : 1,
-        productName:"Labtop"
-    }, {
-        id : 2,
-        productName:"Mobile"
-    }
-
-    ]
-    var result;
-    data.forEach((product) => {
-        if(product.id == req.params.id){
-            result = product;
-            return true;
+$(document).ready(function () {
+    var scroll_start = 0;
+    var startchange = $("#startchange");
+    var offset = startchange.offset();
+    if (startchange.length) {
+      $(document).scroll(function () {
+        scroll_start = $(this).scrollTop();
+        if (scroll_start > offset.top) {
+          $(".navbar-default").css("background-color", "#c1292e");
+        } else {
+          $(".navbar-default").css("background-color", "transparent");
         }
-    })
-    res.render('productdetails',{
-        tittle:"product Details",
-        product:result
-
-    })
-
-});
-
-
-
-app.listen(3000);
+      });
+    }
+  });
